@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Feedback = require('../model/feedback');
 
-
-
 router.get('/',(req,res) =>{
     Feedback.find({ }).then((feedbackData)=>{
         res.json(feedbackData);
